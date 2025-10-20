@@ -1,2 +1,924 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <title>花密 FlowerPassword</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="theme-color" content="#00A8FF">
+
+    <meta name="keywords" content="花密,FlowerPassword,密码,密码管理,密码管理工具">
+    <meta name="description" content="可记忆、无储存，不一样的密码管理工具。">
+    
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="花密">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" href="https://flowerpassword.com/favicon.ico">
+    <link rel="shortcut icon" href="https://flowerpassword.com/favicon.ico" sizes="16x16" type="image/x-icon">
+    <link rel="manifest" href="https://flowerpassword.com/manifest.webmanifest">
+
+    <link rel="apple-touch-icon" sizes="144x144" href="https://flowerpassword.com/assets/img/icons/144full.png">
+    <link rel="icon" href="https://flowerpassword.com/assets/img/icons/48.png" sizes="48x48" type="image/png">
+    <link rel="icon" href="https://flowerpassword.com/assets/img/icons/144.png" sizes="144x144" type="image/png">
+    <link rel="icon" href="https://flowerpassword.com/assets/img/icons/512.png" sizes="512x512" type="image/png">
+
+    
+    
+    <style>
+        html {
+            color: #333;
+            background: #fff;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-rendering: optimizelegibility;
+            box-sizing: border-box
+        }
+
+        *,
+        :after,
+        :before {
+            box-sizing: inherit
+        }
+
+        article,
+        aside,
+        blockquote,
+        body,
+        button,
+        code,
+        dd,
+        details,
+        dl,
+        dt,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hr,
+        input,
+        legend,
+        li,
+        menu,
+        nav,
+        ol,
+        p,
+        pre,
+        section,
+        td,
+        textarea,
+        th,
+        ul {
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        audio,
+        canvas,
+        video {
+            display: inline-block
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif
+        }
+
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            padding: 0;
+            border: 0
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        fieldset,
+        img {
+            border: 0
+        }
+
+        blockquote {
+            position: relative;
+            color: #999;
+            font-weight: 400;
+            border-left: 1px solid #1abc9c;
+            padding-left: 1em;
+            margin: 1em 3em 1em 2em
+        }
+
+        @media only screen and (max-width:640px) {
+            blockquote {
+                margin: 1em 0
+            }
+        }
+
+        abbr,
+        acronym {
+            border-bottom: 1px dotted;
+            font-variant: normal;
+            text-decoration: none
+        }
+
+        abbr {
+            cursor: help
+        }
+
+        del {
+            text-decoration: line-through
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var {
+            font-style: normal;
+            font-weight: 400
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        caption,
+        th {
+            text-align: left
+        }
+
+        q:after,
+        q:before {
+            content: ""
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative
+        }
+
+        :root sub,
+        :root sup {
+            vertical-align: baseline
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        a {
+            color: #1abc9c
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        .typo a {
+            border-bottom: 1px solid #1abc9c
+        }
+
+        .typo a:hover {
+            border-bottom-color: #555;
+            color: #555
+        }
+
+        .typo a:hover,
+        a,
+        ins {
+            text-decoration: none
+        }
+
+        .typo-u,
+        u {
+            text-decoration: underline
+        }
+
+        mark {
+            background: #fffdd1;
+            border-bottom: 1px solid #ffedce;
+            padding: 2px;
+            margin: 0 5px
+        }
+
+        code,
+        pre,
+        pre tt {
+            font-family: Courier, Courier New, monospace
+        }
+
+        pre {
+            background: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: 1em 1.5em;
+            display: block;
+            -webkit-overflow-scrolling: touch
+        }
+
+        hr {
+            border: none;
+            border-bottom: 1px solid #cfcfcf;
+            margin-bottom: .8em;
+            height: 10px
+        }
+
+        .typo-small,
+        figcaption,
+        small {
+            font-size: .9em;
+            color: #888
+        }
+
+        b,
+        strong {
+            font-weight: 700;
+            color: #000
+        }
+
+        [draggable] {
+            cursor: move
+        }
+
+        .clearfix:after,
+        .clearfix:before {
+            content: "";
+            display: table
+        }
+
+        .clearfix:after {
+            clear: both
+        }
+
+        .clearfix {
+            zoom: 1
+        }
+
+        .textwrap,
+        .textwrap td,
+        .textwrap th {
+            word-wrap: break-word;
+            word-break: break-all
+        }
+
+        .textwrap-table {
+            table-layout: fixed
+        }
+
+        .serif {
+            font-family: Palatino, Optima, Georgia, serif
+        }
+
+        .typo-dl,
+        .typo-form,
+        .typo-hr,
+        .typo-ol,
+        .typo-p,
+        .typo-pre,
+        .typo-table,
+        .typo-ul,
+        .typo dl,
+        .typo form,
+        .typo hr,
+        .typo ol,
+        .typo p,
+        .typo pre,
+        .typo table,
+        .typo ul,
+        blockquote {
+            margin-bottom: 1.2em
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+            font-weight: 100;
+            color: #000;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo-h2,
+        .typo-h3,
+        .typo-h4,
+        .typo-h5,
+        .typo-h6,
+        .typo h1,
+        .typo h2,
+        .typo h3,
+        .typo h4,
+        .typo h5,
+        .typo h6 {
+            margin-top: 1.2em;
+            margin-bottom: .6em;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo h1 {
+            font-size: 2em
+        }
+
+        .typo-h2,
+        .typo h2 {
+            font-size: 1.8em
+        }
+
+        .typo-h3,
+        .typo h3 {
+            font-size: 1.6em
+        }
+
+        .typo-h4,
+        .typo h4 {
+            font-size: 1.4em
+        }
+
+        .typo-h5,
+        .typo-h6,
+        .typo h5,
+        .typo h6 {
+            font-size: 1.2em
+        }
+
+        .typo-ul,
+        .typo ul {
+            margin-left: 1.3em;
+            list-style: disc
+        }
+
+        .typo-ol,
+        .typo ol {
+            list-style: decimal;
+            margin-left: 1.9em
+        }
+
+        .typo-ol ol,
+        .typo-ol ul,
+        .typo-ul ol,
+        .typo-ul ul,
+        .typo li ol,
+        .typo li ul {
+            margin-bottom: .8em;
+            margin-left: 2em
+        }
+
+        .typo-ol ul,
+        .typo-ul ul,
+        .typo li ul {
+            list-style: circle
+        }
+
+        .typo-table td,
+        .typo-table th,
+        .typo table caption,
+        .typo table td,
+        .typo table th {
+            border: 1px solid #ddd;
+            padding: .5em 1em;
+            color: #666
+        }
+
+        .typo-table th,
+        .typo table th {
+            background: #fbfbfb
+        }
+
+        .typo-table thead th,
+        .typo table thead th {
+            background: #f1f1f1
+        }
+
+        .typo table caption {
+            border-bottom: none
+        }
+
+        .typo-input,
+        .typo-textarea {
+            -webkit-appearance: none;
+            appearance: none; /* 标准属性 */
+            border-radius: 0
+        }
+
+        .typo-em,
+        .typo em,
+        caption,
+        legend {
+            color: #000;
+            font-weight: inherit
+        }
+
+        .typo-em {
+            position: relative
+        }
+
+        .typo-em:after {
+            position: absolute;
+            top: .65em;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            content: "・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・"
+        }
+
+        .typo img {
+            max-width: 100%
+        }
+
+        @font-face {
+            font-family: Alibaba-PuHuiTi-Heavy;
+            src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format("truetype");
+            font-style: normal;
+            font-weight: 400
+        }
+
+        @font-face {
+            font-family: Alibaba-PuHuiTi-Regular;
+            src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAAKAIAAAwAgT1MvMnO4DisAAACsAAAAYGNtYXAK6A/cAAABDAAAAYJnbHlmadi6pQAAApAAAAP4aGVhZBfBVwkAAAaIAAAANmhoZWEHWQIYAAAGwAAAACRobXR4F+IC+AAABuQAAAAsbG9jYQU8BhoAAAcQAAAAGG1heHAADgA0AAAHKAAAACBuYW1lZIbIrwAAB0gAAARScG9zdAEfAbUAAAucAAAAOAAEAisBkAAFAAQCigJYAAAASwKKAlgAAAFeADIBRAAAAAIGAAQBAQEBAaAAAv8QAAAAAAAAHgAAAABITllJAUAARgB3A1L/agDIBBoBQgAEAJ8AAAAAAhwCtgAAACAACwAAAAMAAAADAAAAHAABAAAAAAB8AAMAAQAAABwABABgAAAAFAAQAAMABABGAFAAYQBlAGwAbwBzAHf/////AAAARgBQAGEAZABsAG8AcgB3//////+7/7L/ov+g/5r/mP+W/5MAAQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAwAABAUAAAAAAAAGAAAHAAAICQAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgBQAAAB7wLmAAMABwAAEyERISURIRFQAZ/+YQFa/uwC5v0aQgJj/Z0AAAABAFwAAAHeArYACQAAExUhFSERIxEhFbYBFP7sWgGCAmbhUP7LArZQAAAAAAIAXAAAAhsCtgAOABsAABMzMh4CFRQOAisBFSMTMj4CNTQuAisBEVzBSWI7GB09YUNnWrkwQicRESdCMF8Ctho2VDo9VjYZ9gFBDiM6LCg3Ig/+2QAAAAACADf/9gIIAiYAIgAvAAABMh4CFREjJw4DIyImNTQ+AjsBNTQuAiMiBgc1PgEDMjY3NSMiDgIVFBYBMUBTMRNJDQwoMzweYVkfOE8wpQsdNCkbPx0eQBtEYBWfITIgEDACJhksPiT+gVIWIhgMVE0wQigSLRgpHRAGBkwEBP4YNzBZCBcoHy0tAAAAAAIAPP/2AiEC+AAWACoAAAERIycOASMiLgI1ND4CMzIeAhcRAzI+AjU0LgIjIg4CFRQeAgIhSQ0QVkpDVzITEzJXQyg6KhwIozFAJg8PJkAxMTkeCAkeOQL4/QhZKzgpSmc+N2ZNLg8bJhgBOv1HHDZNMC5NNx4jO0snKkw4IQAAAgA7//YCCAImACAAKwAAARQGBwUUHgIzMjY3FQ4DIyIuAjU0PgIzMh4CBzQuAiMiDgIHAggDAv6SEihCMS1dHwwmMDcdPF1AISE/WzpFVS4QVQgbNCwvOyIOAQFECyETFyxBKhUUD08GDAkFG0FrUVFrQRspQVEoHzkrGRguQikAAAAAAQBb//oBDAL4AA8AABciJjURMxEUFjMyNjcVDgHTPDxWGBoJFQsMGwY2PQKL/YspGAIDRwMDAAACADv/9gIuAiYAEwAnAAAFIi4CNTQ+AjMyHgIVFA4CJzI+AjU0LgIjIg4CFRQeAgE1PF1AISFAXTw8XT8hIT9dPC49JA8QJT0sLT0lDxAmPAobQWtRUWtBGxtBa1FRa0EbSRQwUDs7UDAVFTBQOztQMBQAAAEAWwAAAWcCJgARAAABByMiDgIHESMRMxU+AzMBZwMMGjIsJAtWVg0mLjMYAiZOChsuJP6fAhxiIioYCAAAAAABADv/+gGlAiYAMQAAFyIuAic1HgMzMjY1NC4CJy4DNTQ2MzIWFwcuASMiBhUUHgIXHgMVFAbYFC0sJQsOJyorEj4/CRovJy06Ig5hYSdNFAYXRCY5OQkWKCAuQSgSaQYDBAcDSgQIBgMjMBgfFRAJChokMiJCUAoISQkMIC4VGhMNBwsZJTYnUUsAAAEAFgAAAycCHAAPAAATMxMzEzMTMxMzAyMDIwMjFlZyBoZmigZyVZZrhgaHawIc/jsBxf47AcX95AG7/kUAAAABAAAAAQAAkM5di18PPPUACQPoAAAAANjjEicAAAAA3IQBDgAW//YDJwL4AAAACQACAAAAAAAAAAEAAAQa/r4AAAM8ABYAEgMnAAEAAAAAAAAAAAAAAAAAAAALAj8AUAIPAFwCVQBcAmQANwJ7ADwCQgA7AR4AWwJqADsBewBbAd8AOwM8ABYAAAAWACwAWACeAN4BIAE8AXYBlgHcAfwAAQAAAAsAMgACAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAABYBDgABAAAAAAAAADYAAAABAAAAAAABABQANgABAAAAAAACAAcASgABAAAAAAADACMAUQABAAAAAAAEABQAdAABAAAAAAAFAAwAiAABAAAAAAAGABYAlAABAAAAAAAHAFoAqgABAAAAAAAIABsBBAABAAAAAAAQABQBHwABAAAAAAARAAcBMwADAAEECQAAAFYBOgADAAEECQABABwBkAADAAEECQACAA4BrAADAAEECQADAEYBugADAAEECQAEABwCAAADAAEECQAFABgCHAADAAEECQAGACwCNAADAAEECQAHAIoCYAADAAEECQAIADAC6gADAAEECQAQABwDGgADAAEECQARAA4DNihjKSAyMDE5IMKWP8KRw4xdw7Rdw7TDvwhOLVbDvcO/CWcJwpZQUWxTw7jDvwxySGdDYkBnCcKWP8KRw4xdw7Rdw7RmbmDDoE9TUmVndWxhckhhbnlpIEFsaWJhYmEtUHVIdWlUaS1SZWd1bGFyIHYxLjEwwpY/wpHDjF3DtF3DtGZuYMOgT1NWZXJzaW9uIDEuMTBBbGliYWJhUHVIdWlUaS1SZWd1bGFywpY/wpHDjF3DtF3DtDABQWxpYmFiYWYvwpY/wpHDjF3DtF3DtMKWw4ZWw6JXKE4tVsO9U8OKUXZOw5ZWw71bwrZiFlcwUzp2woRVRmgHYhZsw6hRwoxVRmgHQWxpYmFiYSBEZXNpZ27DvxtsSU7DqltXXsKTwpY/wpHDjF3DtF3DtGZuYMOgT1NSZWd1bGFyACgAYwApACAAMgAwADEAOQAgAJYAPwCRAMwAXQD0AF0A9AD/AAgATgAtAFYA/QD/AAkAZwAJAJYAUABRAGwAUwD4AP8ADAByAEgAZwBDAGIAQABnAAkAlgA/AJEAzABdAPQAXQD0AGYAbgBgAOAATwBTAFIAZQBnAHUAbABhAHIASABhAG4AeQBpACAAQQBsAGkAYgBhAGIAYQAtAFAAdQBIAHUAaQBUAGkALQBSAGUAZwB1AGwAYQByACAAdgAxAC4AMQAwAJYAPwCRAMwAXQD0AF0A9ABmAG4AYADgAE8AUwBWAGUAcgBzAGkAbwBuACAAMQAuADEAMABBAGwAaQBiAGEAYgBhAFAAdQBIAHUAaQBUAGkALQBSAGUAZwB1AGwAYQByAJYAPwCRAMwAXQD0AF0A9AAwAAEAQQBsAGkAYgBhAGIAYQBmAC8AlgA/AJEAzABdAPQAXQD0AJYAxgBWAOIAVwAoAE4ALQBWAP0AUwDKAFEAdgBOANYAVgD9AFsAtgBiABYAVwAwAFMAOgB2AIQAVQBGAGgABwBiABYAbADoAFEAjABVAEYAaAAHAEEAbABpAGIAYQBiAGEAIABEAGUAcwBpAGcAbgD/ABsAbABJAE4A6gBbAFcAXgCTAJYAPwCRAMwAXQD0AF0A9ABmAG4AYADgAE8AUwBSAGUAZwB1AGwAYQByAAAAAgAAAAAAAP+1ADIAAAAAAAAAAAAAAAAAAAAAAAAACwALAAAAKQAzAEQARwBIAE8AUgBVAFYAWg==) format("truetype");
+            font-style: normal;
+            font-weight: 400
+        }
+
+        #top-bar,
+        body {
+            background-color: #00a8ff
+        }
+
+        #top-bar {
+            height: 270px;
+            max-height: 32vh;
+            background-image: url(https://flowerpassword.com/assets/css/top-bar-bg.png);
+            background-repeat: no-repeat;
+            background-position: 100%;
+            background-size: auto 100%
+        }
+
+        #top-bar-box {
+            margin: 0 auto;
+            max-width: 380px;
+            min-width: 290px;
+            height: 100%;
+            padding: 0 20px;
+            position: relative
+        }
+
+        #logo {
+            position: absolute;
+            left: 20px;
+            bottom: 10px;
+            color: #fff;
+            display: flex;
+            align-items: flex-end
+        }
+
+        #logo .main {
+            font-family: Alibaba-PuHuiTi-Heavy, sans-serif;
+            font-size: 60px
+        }
+
+        #logo .english,
+        #logo .main {
+            align-self: flex-end;
+            line-height: 1.1
+        }
+
+        #logo .english {
+            font-family: Alibaba-PuHuiTi-Regular, sans-serif;
+            font-size: 22px;
+            margin-left: 3px;
+            margin-bottom: 2px;
+            opacity: .5
+        }
+
+        .content-box {
+            margin: 0 auto;
+            max-width: 380px;
+            min-width: 290px;
+            min-height: 50vh;
+            padding: 40px 20px 20px
+        }
+
+        .content-box input {
+            font-family: Monaco, PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+            font-weight: 400;
+            color: #666666;
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ebf0f5;
+            background-color: #ebf0f5;
+            /* margin: 0 0 24px; */
+            border-radius: 4px;
+            outline: none;
+            transition: border-color 0.3s ease; /* 平滑过渡效果 */
+            -webkit-appearance: none;
+            appearance: none; /* 标准属性 */
+        }
+
+        .content-box input:focus {
+            border: 2px solid #77d1ff
+        }
+
+        #password-input-area,
+        #key-input-area {
+            position: relative
+        }
+
+        #last-password {
+            height: 48px;
+            padding: 10px;
+            background-color: #ebf0f5;
+            border-radius: 4px;
+            position: relative
+        }
+
+        #last-password button,
+        #clear-password,
+        #clear-key {
+            border: none
+        }
+
+        #last-password .copy,
+        #clear-password,
+        #clear-key {
+            background-color: #00a8ff;
+            color: #ffffff;
+            height: 100%;
+            width: 88px;
+            padding: 10px 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer
+        }
+
+        #last-password .copied {
+            background-color: #2ecc71 !important
+        }
+
+        #last-password:hover .show-password {
+            opacity: .8
+        }
+
+        #last-password .password {
+            font-family: Monaco, consolas, monospace, sans-serif;
+            font-weight: 400;
+            color: #666
+        }
+
+        @media (any-hover:hover) {
+            #last-password .copy:hover {
+                background-color: #0088cf
+            }
+        }
+
+        .show-password {
+            cursor: pointer;
+            padding: 0 3px;
+            float: right;
+            margin-right: 90px;
+            background-color: transparent;
+            opacity: .1;
+            outline: none
+        }
+
+        .svg-icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            line-height: 1;
+            vertical-align: -.125em;
+            background-repeat: no-repeat;
+            background-size: 1em 1em;
+            background-position: 50%
+        }
+
+        .icon-open-eye {
+            background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye"><path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 011.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0114.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 011.172 8z"/><path d="M8 5.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM4.5 8a3.5 3.5 0 117 0 3.5 3.5 0 01-7 0z"/></svg>')
+        }
+
+        .icon-close-eye {
+            background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash"><path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 00-2.79.588l.77.771A5.944 5.944 0 018 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0114.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z"/><path d="M11.297 9.176a3.5 3.5 0 00-4.474-4.474l.823.823a2.5 2.5 0 012.829 2.829l.822.822zm-2.943 1.299l.822.822a3.5 3.5 0 01-4.474-4.474l.823.823a2.5 2.5 0 002.829 2.829z"/><path d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 001.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 018 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884l-12-12 .708-.708 12 12-.708.708z"/></svg>')
+        }
+
+        .hidden {
+            display: none
+        }
+
+        #footer {
+            text-align: center;
+            font-size: 12px;
+            color: #9299a4
+        }
+
+        #footer a.beian {
+            color: #b0b8c4
+        }
+
+        #footer a.beian:hover {
+            color: #646b75
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top-bar">
+        <div id="top-bar-box">
+            <div id="logo">
+                <div class="main">花密</div>
+                <div class="english">
+                    <p>Flower</p>
+                    <p>Password</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <div id="password-input-area">
+                <input class="password-in-mind" type="password" placeholder="记忆密码" id="password-input" name="password" autocomplete="new-password" onpaste="return true;">
+                <button class="clear-button" id="clear-password">清除</button>
+            </div>
+            <br> <!-- 添加间隔 -->
+            <div id="key-input-area">
+                <input class="key" type="text" placeholder="区分代号" id="key-input">
+                <button class="clear-button" id="clear-key">清除</button>
+            </div>
+            <br> <!-- 添加间隔 -->
+            <div id="last-password" class="hidden">
+                <span class="password" id="generated-hash">请输入记忆密码和区分代号</span>
+                <button class="show-password"><i class="svg-icon icon-close-eye"></i></button>
+                <button class="copy" id="copy-button">复制</button>
+            </div>
+        </div>
+
+        <div id="footer">
+            <p>Copyright © 2011-2023 Flower Password</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js');
+        }
+        if (window.matchMedia('(display-mode: standalone)').matches) {
+            document.addEventListener("DOMContentLoaded", function () {
+                document.title = '';
+            });
+        }
+    </script>
+    <script>
+
+        const copyButton = document.getElementById('copy-button');
+        const generatedPassword = document.getElementById('generated-hash');
+        // 定义显示密码控制器
+        const show_password_controller = {
+            getIcon: function () {
+                return document.querySelector('.show-password i'); // 获取图标元素
+            },
+            getStatus: function () {
+                return this.getIcon().classList.contains('icon-open-eye'); // 检查当前状态
+            },
+            toggleStatus: function () {
+                const icon = this.getIcon();
+                if (this.getStatus()) {
+                    // 当前是显示状态，切换为隐藏状态
+                    icon.setAttribute('class', 'svg-icon icon-close-eye'); // 修改为隐藏图标
+                } else {
+                    // 当前是隐藏状态，切换为显示状态
+                    icon.setAttribute('class', 'svg-icon icon-open-eye');  // 修改为显示图标
+                }
+                updateHash()
+            }
+        };
+        let clipboardText = '000';
+        
+        async function generateHMACSHA256Password(password, key) {
+            const enc = new TextEncoder();
+            const keyBuf = enc.encode(key);
+            const passwordBuf = enc.encode(password);
+
+            const cryptoKey = await window.crypto.subtle.importKey(
+                'raw',
+                keyBuf,
+                { name: 'HMAC', hash: 'SHA-256' },
+                false,
+                ['sign']
+            );
+
+            const signature = await window.crypto.subtle.sign('HMAC', cryptoKey, passwordBuf);
+            const signatureHex = Array.from(new Uint8Array(signature))
+                .map(b => ('00' + b.toString(16)).slice(-2))
+                .join('');
+
+            // 定义字符集
+            const charSet = {
+                upper: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",        // 大写字母
+                lower: "abcdefghijklmnopqrstuvwxyz",        // 小写字母
+                digits: "0123456789876543210",              // 数字
+                specials: "<:!@#$%^&*_+=-.?;>"              // 特殊字符
+            };
+            const alphabet = charSet.upper + charSet.lower  // 字母
+            const allChars = charSet.upper + charSet.lower + charSet.digits + charSet.specials
+
+            let result = [];
+            let typesUsed = { upper: false, lower: false, digits: false, specials: false };
+
+            // 分割 HMAC 值为 4 位字符并进行映射
+            for (let i = 0; i < signatureHex.length; i += 4) {
+                const hexChunk = signatureHex.slice(i, i + 4);
+                const decimalValue = parseInt(hexChunk, 16);
+                const index = decimalValue % allChars.length;
+                
+                if(i == 0){ // 字母开头
+                    result.push(alphabet[decimalValue % alphabet.length]);
+                    continue;
+                }
+
+                if (index < charSet.upper.length) {
+                    typesUsed.upper = true;
+                } 
+                else if (index < charSet.upper.length + charSet.lower.length) {
+                    typesUsed.lower = true;
+                } 
+                else if (index < charSet.upper.length + charSet.lower.length + charSet.digits.length) {
+                    typesUsed.digits = true;
+                } 
+                else {
+                    typesUsed.specials = true;
+                }
+                if (i / 4 >= 12) {
+                    // 检查并补充遗漏的字符类型
+                    if (!typesUsed.upper) {
+                        result.push(charSet.upper[decimalValue % charSet.upper.length]);
+                        typesUsed.upper = true;
+                    } 
+                    else if (!typesUsed.lower) {
+                        result.push(charSet.lower[decimalValue % charSet.lower.length]);
+                        typesUsed.lower = true;
+                    } 
+                    else if (!typesUsed.digits) {
+                        result.push(charSet.digits[decimalValue % charSet.digits.length]);
+                        typesUsed.digits = true;
+                    } 
+                    else if (!typesUsed.specials) {
+                        result.push(charSet.specials[decimalValue % charSet.specials.length]);
+                        typesUsed.specials = true;
+                    } 
+                    else {
+                        result.push(allChars[index]);
+                    }
+                    continue;
+                }
+                result.push(allChars[index]);
+                
+            }
+            return result.join('');
+        }
+
+        async function updateHash() {
+            function replaceWithAsterisks(str) {
+                if (str.length <= 6) {
+                    // 如果字符串长度小于等于6，不需要替换
+                    return str;
+                }
+                const front = str.slice(0, 3); // 获取前3个字符
+                const back = str.slice(-3); // 获取后3个字符
+                const middle = '*'.repeat(str.length - 6); // 中间部分用星号填充
+                return front + middle + back; // 拼接并返回
+            }
+            const password = document.getElementById('password-input').value;
+            const key = document.getElementById('key-input').value;
+            if (password && key) {
+                const hmac = await generateHMACSHA256Password(password, key);
+                clipboardText = hmac
+                if(show_password_controller.getStatus()){
+                    generatedPassword.innerText = hmac;
+                }else{
+                    generatedPassword.innerText = replaceWithAsterisks(hmac);
+                }
+                document.getElementById('last-password').classList.remove('hidden');
+            } else {
+                document.getElementById('last-password').classList.add('hidden');
+            }
+        }
+        
+        // 为显示密码按钮添加点击事件监听器
+        document.querySelector('.show-password').addEventListener('click', function () {
+            show_password_controller.toggleStatus(); // 切换状态
+        });
+        document.getElementById('password-input').addEventListener('input', updateHash);
+        document.getElementById('key-input').addEventListener('input', updateHash);
+        document.getElementById('password-input').addEventListener('input', function () {
+            // 恢复复制按钮样式
+            if (copyButton.classList.contains('copied')) {
+                copyButton.classList.remove('copied');
+            }
+            if (copyButton.innerText !== '复制') {
+                copyButton.innerText = '复制';
+            }
+        });
+        document.getElementById('key-input').addEventListener('input', function () {
+            // 恢复复制按钮样式
+            if (copyButton.classList.contains('copied')) {
+                copyButton.classList.remove('copied');
+            }
+            if (copyButton.innerText !== '复制') {
+                copyButton.innerText = '复制';
+            }
+        });
+
+        document.getElementById('clear-password').addEventListener('click', function () {
+            document.getElementById('password-input').value = '';
+            updateHash(); // 更新哈希
+        });
+        document.getElementById('clear-key').addEventListener('click', function () {
+            document.getElementById('key-input').value = '';
+            updateHash(); // 更新哈希
+        });
+        
+        
+        // 实例化 Clipboard.js
+        const clipboard = new ClipboardJS(copyButton, {
+            text : function() {
+                return clipboardText; // 返回生成的 HMAC 值
+            }
+        });
+
+        // 添加复制成功的回调
+        clipboard.on('success', function(e) {
+            copyButton.classList.add('copied'); // 添加点击样式
+            copyButton.innerText = '已复制';
+            console.log(clipboardText)
+            // // 移除复制样式
+            // setTimeout(() => {
+            //     copyButton.classList.remove('copied');
+            //     copyButton.innerText = '复制';
+            // }, 1500);
+
+            // 释放选择的内容
+            e.clearSelection();
+        });
+
+        // 添加错误处理
+        clipboard.on('error', function(err) {
+            console.error('复制失败: ', err);
+            alert('复制失败，请重试');
+        });
+
+        // 监听 touchstart 事件（可选，主要用于移动端支持）
+        copyButton.addEventListener('touchstart', function() {
+            clipboard.on('success', (e) => {
+                e.trigger.click(); // 确保在触控设备上复制的成功
+            });
+        });
+
+
+    </script>
+
+</body>
+
+</html>
 # FlowerPassword
-花密自用
+
