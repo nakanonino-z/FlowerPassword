@@ -61,13 +61,13 @@
     }'>
     <style>
         /* 加载字体 */
-        @font-face {
-            font-family: Alibaba-PuHuiTi-Heavy;
-            src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format("truetype");
+        @font-face { 
+            font-family: "AlibabaPuHuiTi-3-115-Black";
+            src: url(data:application/x-font-ttf;charset=utf-8;base64,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BEDCqSAyMDIwLTIwMjMgwpY/wpHDjF3DtF3DtMO/CE4tVsO9w78JZwnCllBRbFPDuMO/DHJIZ0NiQGcJwpY/wpHDjF3DtF3DtGZuYMOgT1MgMy4wIDExNSBCbGFja1JlZ3VsYXJIYW55aSBBbGliYWJhLVB1SHVpVGktMy0xMTUtQmxhY2sgdjMuMDHClj/CkcOMXcO0XcO0Zm5gw6BPUyAzIDExNSBCbGFja1ZlcnNpb24gMy4wMUFsaWJhYmFQdUh1aVRpXzNfMTE1X0JsYWNrwpY/wpHDjF3DtF3DtDABQWxpYmFiYWYvwpY/wpHDjF3DtF3DtMKWw4ZWw6JXKE4tVsO9U8OKUXZOw5ZWw71bwrZiFlcwUzp2woRVRmgHYhZsw6hRwoxVRmgHQWxpYmFiYSBEZXNpZ27DvxtsSU7DqltXXsKTQWxpYmFiYSBEZXNpZ25HQjIzMTItMTk4MCArMArCkBp1KMKJw4TCgwNsSVtXwohoMAvClj/CkcOMXcO0XcO0Zm5gw6BPUyAzLjAxMTUgQmxhY2sAqQAgADIAMAAyADAALQAyADAAMgAzACAAlgA/AJEAzABdAPQAXQD0AP8ACABOAC0AVgD9AP8ACQBnAAkAlgBQAFEAbABTAPgA/wAMAHIASABnAEMAYgBAAGcACQCWAD8AkQDMAF0A9ABdAPQAZgBuAGAA4ABPAFMAIAAzAC4AMAAgADEAMQA1ACAAQgBsAGEAYwBrAFIAZQBnAHUAbABhAHIASABhAG4AeQBpACAAQQBsAGkAYgBhAGIAYQAtAFAAdQBIAHUAaQBUAGkALQAzAC0AMQAxADUALQBCAGwAYQBjAGsAIAB2ADMALgAwADEAlgA/AJEAzABdAPQAXQD0AGYAbgBgAOAATwBTACAAMwAgADEAMQA1ACAAQgBsAGEAYwBrAFYAZQByAHMAaQBvAG4AIAAzAC4AMAAxAEEAbABpAGIAYQBiAGEAUAB1AEgAdQBpAFQAaQBfADMAXwAxADEANQBfAEIAbABhAGMAawCWAD8AkQDMAF0A9ABdAPQAMAABAEEAbABpAGIAYQBiAGEAZgAvAJYAPwCRAMwAXQD0AF0A9ACWAMYAVgDiAFcAKABOAC0AVgD9AFMAygBRAHYATgDWAFYA/QBbALYAYgAWAFcAMABTADoAdgCEAFUARgBoAAcAYgAWAGwA6ABRAIwAVQBGAGgABwBBAGwAaQBiAGEAYgBhACAARABlAHMAaQBnAG4A/wAbAGwASQBOAOoAWwBXAF4AkwBBAGwAaQBiAGEAYgBhACAARABlAHMAaQBnAG4ARwBCADIAMwAxADIALQAxADkAOAAwACAAKwAwAAoAkAAaAHUAKACJAMQAgwADAGwASQBbAFcAiABoADAACwCWAD8AkQDMAF0A9ABdAPQAZgBuAGAA4ABPAFMAIAAzAC4AMAAxADEANQAgAEIAbABhAGMAawACAAAAAAAA/7UAMgAAAAAAAAAAAAAAAAAAAAAAAAAEAAQAAAECAQMBBAd1bmk1QkM2B3VuaTczMkIHdW5pODJCMQAA) format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
             font-style: normal;
-            font-weight: 400
+            font-weight: 400;
         }
-        @font-face {
+        @font-face { 
             font-family: Alibaba-PuHuiTi-Regular;
             src: url(data:application/x-font-ttf;charset=utf-8;base64,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Ad8AOwM8ABYAAAAWACwAWACeAN4BIAE8AXYBlgHcAfwAAQAAAAsAMgACAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAABYBDgABAAAAAAAAADYAAAABAAAAAAABABQANgABAAAAAAACAAcASgABAAAAAAADACMAUQABAAAAAAAEABQAdAABAAAAAAAFAAwAiAABAAAAAAAGABYAlAABAAAAAAAHAFoAqgABAAAAAAAIABsBBAABAAAAAAAQABQBHwABAAAAAAARAAcBMwADAAEECQAAAFYBOgADAAEECQABABwBkAADAAEECQACAA4BrAADAAEECQADAEYBugADAAEECQAEABwCAAADAAEECQAFABgCHAADAAEECQAGACwCNAADAAEECQAHAIoCYAADAAEECQAIADAC6gADAAEECQAQABwDGgADAAEECQARAA4DNihjKSAyMDE5IMKWP8KRw4xdw7Rdw7TDvwhOLVbDvcO/CWcJwpZQUWxTw7jDvwxySGdDYkBnCcKWP8KRw4xdw7Rdw7RmbmDDoE9TUmVndWxhckhhbnlpIEFsaWJhYmEtUHVIdWlUaS1SZWd1bGFyIHYxLjEwwpY/wpHDjF3DtF3DtGZuYMOgT1NWZXJzaW9uIDEuMTBBbGliYWJhUHVIdWlUaS1SZWd1bGFywpY/wpHDjF3DtF3DtDABQWxpYmFiYWYvwpY/wpHDjF3DtF3DtMKWw4ZWw6JXKE4tVsO9U8OKUXZOw5ZWw71bwrZiFlcwUzp2woRVRmgHYhZsw6hRwoxVRmgHQWxpYmFiYSBEZXNpZ27DvxtsSU7DqltXXsKTwpY/wpHDjF3DtF3DtGZuYMOgT1NSZWd1bGFyACgAYwApACAAMgAwADEAOQAgAJYAPwCRAMwAXQD0AF0A9AD/AAgATgAtAFYA/QD/AAkAZwAJAJYAUABRAGwAUwD4AP8ADAByAEgAZwBDAGIAQABnAAkAlgA/AJEAzABdAPQAXQD0AGYAbgBgAOAATwBTAFIAZQBnAHUAbABhAHIASABhAG4AeQBpACAAQQBsAGkAYgBhAGIAYQAtAFAAdQBIAHUAaQBUAGkALQBSAGUAZwB1AGwAYQByACAAdgAxAC4AMQAwAJYAPwCRAMwAXQD0AF0A9ABmAG4AYADgAE8AUwBWAGUAcgBzAGkAbwBuACAAMQAuADEAMABBAGwAaQBiAGEAYgBhAFAAdQBIAHUAaQBUAGkALQBSAGUAZwB1AGwAYQByAJYAPwCRAMwAXQD0AF0A9AAwAAEAQQBsAGkAYgBhAGIAYQBmAC8AlgA/AJEAzABdAPQAXQD0AJYAxgBWAOIAVwAoAE4ALQBWAP0AUwDKAFEAdgBOANYAVgD9AFsAtgBiABYAVwAwAFMAOgB2AIQAVQBGAGgABwBiABYAbADoAFEAjABVAEYAaAAHAEEAbABpAGIAYQBiAGEAIABEAGUAcwBpAGcAbgD/ABsAbABJAE4A6gBbAFcAXgCTAJYAPwCRAMwAXQD0AF0A9ABmAG4AYADgAE8AUwBSAGUAZwB1AGwAYQByAAAAAgAAAAAAAP+1ADIAAAAAAAAAAAAAAAAAAAAAAAAACwALAAAAKQAzAEQARwBIAE8AUgBVAFYAWg==) format("truetype");
             font-style: normal;
@@ -152,7 +152,7 @@
         }
 
         #logo .main {
-            font-family: Alibaba-PuHuiTi-Heavy, sans-serif;
+            font-family: AlibabaPuHuiTi-3-115-Black, sans-serif;
             font-size: 60px
         }
 
@@ -197,10 +197,6 @@
             margin-bottom: 24px;
         }
 
-        .content-box input:focus {
-            border: 2px solid #77d1ff
-        }
-
         #password-input-area,
         #key-input-area {
             position: relative
@@ -235,10 +231,6 @@
             cursor: pointer
         }
 
-        #last-password .copied {
-            background-color: #77d1ff !important
-        }
-
         #last-password:hover .show-password {
             opacity: .8
         }
@@ -247,12 +239,6 @@
             font-family: Monaco, consolas, monospace, sans-serif;
             font-weight: 400;
             color: #666
-        }
-
-        @media (any-hover:hover) {
-            #last-password .copy:hover {
-                background-color: #cc5d7d
-            }
         }
 
         .show-password {
@@ -320,16 +306,16 @@
         <div class="content-box">
             <div id="password-input-area" class="input-group">
                 <input class="password-in-mind" type="password" placeholder="记忆密码" id="password-input" name="password" autocomplete="new-password" onpaste="return true;">
-                <button class="clear-button" id="clear-password">清除</button>
+                <button class="clear-button" id="clear-password" tabindex="-1">清除</button>
             </div>
             <div id="key-input-area" class="input-group">
                 <input class="key" type="text" placeholder="区分代号" id="key-input">
-                <button class="clear-button" id="clear-key">清除</button>
+                <button class="clear-button" id="clear-key" tabindex="-1">清除</button>
             </div>
             <div id="last-password" class="hidden">
                 <span class="password" id="generated-hash">请输入记忆密码和区分代号</span>
-                <button class="show-password"><i class="svg-icon icon-close-eye"></i></button>
-                <button class="copy" id="copy-button">复制</button>
+                <button class="show-password" tabindex="-1"><i class="svg-icon icon-close-eye"></i></button>
+                <button class="copy" id="copy-button" tabindex="-1">复制</button>
             </div>
         </div>
 
@@ -348,30 +334,81 @@
     </script>
 
     <script>
-        const copyButton = document.getElementById('copy-button');
-        const generatedPassword = document.getElementById('generated-hash');
-        // 定义显示密码控制器
-        const show_password_controller = {
-            getIcon: function () {
-                return document.querySelector('.show-password i'); // 获取图标元素
+        // ==================== 常量配置 ====================
+        const CONFIG = {
+            charSet: {
+                upper: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+                lower: "abcdefghijklmnopqrstuvwxyz",
+                digits: "0123456789876543210",
+                specials: "<:!@#$%^&*_+=-.?;>"
             },
-            getStatus: function () {
-                return this.getIcon().classList.contains('icon-open-eye'); // 检查当前状态
-            },
-            toggleStatus: function () {
-                const icon = this.getIcon();
-                if (this.getStatus()) {
-                    // 当前是显示状态，切换为隐藏状态
-                    icon.setAttribute('class', 'svg-icon icon-close-eye'); // 修改为隐藏图标
-                } else {
-                    // 当前是隐藏状态，切换为显示状态
-                    icon.setAttribute('class', 'svg-icon icon-open-eye');  // 修改为显示图标
+            themes: {
+                pink: {
+                    bgColor: '#FB7299',
+                    btnColor: '#FB7299',
+                    btnHover: '#cc5d7d',
+                    copiedColor: '#77d1ff',
+                    inputFocusColor: '#ff83a6'
+                },
+                blue: {
+                    bgColor: '#00a8ff',
+                    btnColor: '#00a8ff',
+                    btnHover: '#0088cf',
+                    copiedColor: '#2ECC71',
+                    inputFocusColor: '#77D1FF'
                 }
-                updateHash()
             }
         };
-        let clipboardText = '';
-        
+
+        // ==================== DOM元素缓存 ====================
+        const DOM = {
+            passwordInput: document.getElementById('password-input'),
+            keyInput: document.getElementById('key-input'),
+            passwordInputArea: document.getElementById('password-input-area'),
+            keyInputArea: document.getElementById('key-input-area'),
+            clearPassword: document.getElementById('clear-password'),
+            clearKey: document.getElementById('clear-key'),
+            lastPassword: document.getElementById('last-password'),
+            generatedHash: document.getElementById('generated-hash'),
+            copyButton: document.getElementById('copy-button'),
+            showPasswordBtn: document.querySelector('.show-password'),
+            topBar: document.getElementById('top-bar'),
+            themeToggle: document.getElementById('theme-toggle')
+        };
+
+        // ==================== 状态管理 ====================
+        let state = {
+            clipboardText: '',
+            isPinkTheme: true,
+            themeStyleElement: null
+        };
+
+        // ==================== 工具函数 ====================
+        const Utils = {
+            replaceWithAsterisks: function(str) {
+                if (str.length <= 6) return str;
+                const front = str.slice(0, 3);
+                const back = str.slice(-3);
+                const middle = '*'.repeat(str.length - 6);
+                return front + middle + back;
+            },
+            recordCharType: function(char, charSet, typesUsed) {
+                if (charSet.upper.includes(char)) {
+                    typesUsed.upper = true;
+                } else if (charSet.lower.includes(char)) {
+                    typesUsed.lower = true;
+                } else if (charSet.digits.includes(char)) {
+                    typesUsed.digits = true;
+                } else {
+                    typesUsed.specials = true;
+                }
+            },
+            getRandomChar: function(charSetStr, decimalValue) {
+                return charSetStr[decimalValue % charSetStr.length];
+            }
+        };
+
+        // ==================== 密码生成器 ====================
         async function generateHMACSHA256Password(password, key) {
             const enc = new TextEncoder();
             const keyBuf = enc.encode(key);
@@ -390,226 +427,218 @@
                 .map(b => ('00' + b.toString(16)).slice(-2))
                 .join('');
 
-            // 定义字符集
-            const charSet = {
-                upper: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",        // 大写字母
-                lower: "abcdefghijklmnopqrstuvwxyz",        // 小写字母
-                digits: "0123456789876543210",              // 数字
-                specials: "<:!@#$%^&*_+=-.?;>"              // 特殊字符
-            };
-            const alphabet = charSet.upper + charSet.lower  // 字母
-            const allChars = charSet.upper + charSet.lower + charSet.digits + charSet.specials
+            const charSet = CONFIG.charSet;
+            const alphabet = charSet.upper + charSet.lower;
+            const allChars = charSet.upper + charSet.lower + charSet.digits + charSet.specials;
 
             let result = [];
             let typesUsed = { upper: false, lower: false, digits: false, specials: false };
 
-            // 分割 HMAC 值为 4 位字符并进行映射
             for (let i = 0; i < signatureHex.length; i += 4) {
                 const hexChunk = signatureHex.slice(i, i + 4);
                 const decimalValue = parseInt(hexChunk, 16);
-                const index = decimalValue % allChars.length;
                 
-                if(i == 0){ // 字母开头
-                    result.push(alphabet[decimalValue % alphabet.length]);
+                if(i == 0) {
+                    const char = Utils.getRandomChar(alphabet, decimalValue);
+                    result.push(char);
+                    Utils.recordCharType(char, charSet, typesUsed);
                     continue;
                 }
 
-                if (index < charSet.upper.length) {
-                    typesUsed.upper = true;
-                } 
-                else if (index < charSet.upper.length + charSet.lower.length) {
-                    typesUsed.lower = true;
-                } 
-                else if (index < charSet.upper.length + charSet.lower.length + charSet.digits.length) {
-                    typesUsed.digits = true;
-                } 
-                else {
-                    typesUsed.specials = true;
-                }
-                if (i / 4 >= 12) {
-                    // 检查并补充遗漏的字符类型
-                    if (!typesUsed.upper) {
-                        result.push(charSet.upper[decimalValue % charSet.upper.length]);
-                        typesUsed.upper = true;
-                    } 
-                    else if (!typesUsed.lower) {
-                        result.push(charSet.lower[decimalValue % charSet.lower.length]);
-                        typesUsed.lower = true;
-                    } 
-                    else if (!typesUsed.digits) {
-                        result.push(charSet.digits[decimalValue % charSet.digits.length]);
-                        typesUsed.digits = true;
-                    } 
-                    else if (!typesUsed.specials) {
-                        result.push(charSet.specials[decimalValue % charSet.specials.length]);
-                        typesUsed.specials = true;
-                    } 
-                    else {
-                        result.push(allChars[index]);
-                    }
-                    continue;
-                }
-                result.push(allChars[index]);
+                const index = decimalValue % allChars.length;
+                let char;
                 
+                if (i / 4 >= 12) {
+                    if (!typesUsed.upper) {
+                        char = Utils.getRandomChar(charSet.upper, decimalValue);
+                    } else if (!typesUsed.lower) {
+                        char = Utils.getRandomChar(charSet.lower, decimalValue);
+                    } else if (!typesUsed.digits) {
+                        char = Utils.getRandomChar(charSet.digits, decimalValue);
+                    } else if (!typesUsed.specials) {
+                        char = Utils.getRandomChar(charSet.specials, decimalValue);
+                    } else {
+                        char = allChars[index];
+                    }
+                } else {
+                    char = allChars[index];
+                }
+                
+                result.push(char);
+                Utils.recordCharType(char, charSet, typesUsed);
             }
             return result.join('');
         }
 
-        async function updateHash() {
-            function replaceWithAsterisks(str) {
-                if (str.length <= 6) {
-                    // 如果字符串长度小于等于6，不需要替换
-                    return str;
-                }
-                const front = str.slice(0, 3); // 获取前3个字符
-                const back = str.slice(-3); // 获取后3个字符
-                const middle = '*'.repeat(str.length - 6); // 中间部分用星号填充
-                return front + middle + back; // 拼接并返回
+        // ==================== 显示密码控制器 ====================
+        const showPasswordController = {
+            getIcon: function() {
+                return DOM.showPasswordBtn.querySelector('i');
+            },
+            getStatus: function() {
+                return this.getIcon().classList.contains('icon-open-eye');
+            },
+            toggleStatus: function() {
+                const icon = this.getIcon();
+                const isOpen = this.getStatus();
+                icon.setAttribute('class', isOpen ? 'svg-icon icon-close-eye' : 'svg-icon icon-open-eye');
+                updateHash();
             }
-            const password = document.getElementById('password-input').value;
-            const key = document.getElementById('key-input').value;
+        };
+
+        // ==================== 主题管理器 ====================
+        const ThemeManager = {
+            loadSavedTheme: function() {
+                const savedTheme = localStorage.getItem('flowerPasswordTheme');
+                if (savedTheme !== null) {
+                    state.isPinkTheme = savedTheme === 'pink';
+                }
+            },
+            saveTheme: function(isPink) {
+                localStorage.setItem('flowerPasswordTheme', isPink ? 'pink' : 'blue');
+            },
+            applyTheme: function(theme) {
+                document.body.style.backgroundColor = theme.bgColor;
+                DOM.topBar.style.backgroundColor = theme.bgColor;
+                
+                const copyBtn = DOM.lastPassword.querySelector('.copy');
+                const clearBtns = document.querySelectorAll('#clear-password, #clear-key');
+                copyBtn.style.backgroundColor = theme.btnColor;
+                clearBtns.forEach(btn => btn.style.backgroundColor = theme.btnColor);
+                
+                if (!state.themeStyleElement) {
+                    state.themeStyleElement = document.createElement('style');
+                    state.themeStyleElement.id = 'theme-styles';
+                    document.head.appendChild(state.themeStyleElement);
+                }
+                
+                state.themeStyleElement.innerHTML = `
+                    @media (hover: hover) {
+                        #last-password .copy:hover:not(.copied), #clear-password:hover, #clear-key:hover {
+                            background-color: ${theme.btnHover} !important;
+                        }
+                    }
+                    #last-password .copied {
+                        background-color: ${theme.copiedColor} !important;
+                    }
+                    .content-box input:focus {
+                        border-color: ${theme.inputFocusColor} !important;
+                    }
+                `;
+            }
+        };
+
+        // ==================== 复制功能 ====================
+        const CopyManager = {
+            resetCopyButton: function() {
+                if (DOM.copyButton.classList.contains('copied')) {
+                    DOM.copyButton.classList.remove('copied');
+                }
+                if (DOM.copyButton.innerText !== '复制') {
+                    DOM.copyButton.innerText = '复制';
+                }
+            },
+            initClipboard: function() {
+                const clipboard = new ClipboardJS(DOM.copyButton, {
+                    text: function() {
+                        return state.clipboardText;
+                    }
+                });
+
+                clipboard.on('success', function(e) {
+                    DOM.copyButton.classList.add('copied');
+                    DOM.copyButton.innerText = '已复制';
+                    e.clearSelection();
+                });
+
+                clipboard.on('error', function(err) {
+                    console.error('复制失败: ', err);
+                    alert('复制失败，请重试');
+                });
+            }
+        };
+
+        // ==================== 主逻辑 ====================
+        async function updateHash() {
+            const password = DOM.passwordInput.value;
+            const key = DOM.keyInput.value;
+            
             if (password && key) {
                 const hmac = await generateHMACSHA256Password(password, key);
-                clipboardText = hmac
-                if(show_password_controller.getStatus()){
-                    generatedPassword.innerText = hmac;
-                }else{
-                    generatedPassword.innerText = replaceWithAsterisks(hmac);
+                state.clipboardText = hmac;
+                
+                if(showPasswordController.getStatus()) {
+                    DOM.generatedHash.innerText = hmac;
+                } else {
+                    DOM.generatedHash.innerText = Utils.replaceWithAsterisks(hmac);
                 }
-                document.getElementById('last-password').classList.remove('hidden');
+                
+                DOM.lastPassword.classList.remove('hidden');
             } else {
-                document.getElementById('last-password').classList.add('hidden');
-            }
-        }
-        
-        // 为显示密码按钮添加点击事件监听器
-        document.querySelector('.show-password').addEventListener('click', function () {
-            show_password_controller.toggleStatus(); // 切换状态
-        });
-        function resetCopyButton() {
-            if (copyButton.classList.contains('copied')) {
-                copyButton.classList.remove('copied');
-            }
-            if (copyButton.innerText !== '复制') {
-                copyButton.innerText = '复制';
-            }
-        }
-        document.getElementById('password-input').addEventListener('input', function() {
-            updateHash();
-            resetCopyButton();
-        });
-        document.getElementById('key-input').addEventListener('input', function() {
-            updateHash();
-            resetCopyButton();
-        });
-
-        document.getElementById('clear-password').addEventListener('click', function () {
-            document.getElementById('password-input').value = '';
-            updateHash(); // 更新哈希
-        });
-        document.getElementById('clear-key').addEventListener('click', function () {
-            document.getElementById('key-input').value = '';
-            updateHash(); // 更新哈希
-        });
-        
-        
-        // 实例化 Clipboard.js
-        const clipboard = new ClipboardJS(copyButton, {
-            text : function() {
-                return clipboardText; // 返回生成的 HMAC 值
-            }
-        });
-
-        // 添加复制成功的回调
-        clipboard.on('success', function(e) {
-            copyButton.classList.add('copied'); // 添加点击样式
-            copyButton.innerText = '已复制';
-            // 移除复制样式
-            // setTimeout(() => {
-            //     copyButton.classList.remove('copied');
-            //     copyButton.innerText = '复制';
-            // }, 1500);
-
-            // 释放选择的内容
-            e.clearSelection();
-        });
-
-        // 添加错误处理
-        clipboard.on('error', function(err) {
-            console.error('复制失败: ', err);
-            alert('复制失败，请重试');
-        });
-
-        // 配色切换功能
-        const themeToggle = document.getElementById('theme-toggle');
-        
-        const pinkTheme = {
-            bgColor: '#FB7299',
-            btnColor: '#FB7299',
-            btnHover: '#cc5d7d',
-            copiedColor: '#77d1ff'
-        };
-
-        const blueTheme = {
-            bgColor: '#00a8ff',
-            btnColor: '#00a8ff',
-            btnHover: '#0088cf',
-            copiedColor: '#2ECC71'
-        };
-
-        let themeStyleElement = null;
-        let isPinkTheme = true;
-
-        // 从localStorage读取保存的主题
-        function loadSavedTheme() {
-            const savedTheme = localStorage.getItem('flowerPasswordTheme');
-            if (savedTheme !== null) {
-                isPinkTheme = savedTheme === 'pink';
+                DOM.lastPassword.classList.add('hidden');
             }
         }
 
-        // 保存主题到localStorage
-        function saveTheme(isPink) {
-            localStorage.setItem('flowerPasswordTheme', isPink ? 'pink' : 'blue');
-        }
+        // ==================== 事件绑定 ====================
+        function bindEvents() {
+            DOM.showPasswordBtn.addEventListener('click', function() {
+                showPasswordController.toggleStatus();
+            });
 
-        function applyTheme(theme) {
-            document.body.style.backgroundColor = theme.bgColor;
-            document.getElementById('top-bar').style.backgroundColor = theme.bgColor;
-            
-            const copyBtn = document.querySelector('#last-password .copy');
-            const clearBtns = document.querySelectorAll('#clear-password, #clear-key');
-            copyBtn.style.backgroundColor = theme.btnColor;
-            clearBtns.forEach(btn => btn.style.backgroundColor = theme.btnColor);
-            
-            // 创建或更新样式元素
-            if (!themeStyleElement) {
-                themeStyleElement = document.createElement('style');
-                themeStyleElement.id = 'theme-styles';
-                document.head.appendChild(themeStyleElement);
-            }
-            
-            themeStyleElement.innerHTML = `
-                @media (any-hover:hover) {
-                    #last-password .copy:hover:not(.copied), #clear-password:hover, #clear-key:hover {
-                        background-color: ${theme.btnHover} !important;
-                    }
+            DOM.passwordInput.addEventListener('input', function() {
+                updateHash();
+                CopyManager.resetCopyButton();
+            });
+
+            DOM.keyInput.addEventListener('input', function() {
+                updateHash();
+                CopyManager.resetCopyButton();
+            });
+
+            // 添加Delete键清除功能
+            DOM.passwordInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Delete') {
+                    DOM.passwordInput.value = '';
+                    updateHash();
+                    CopyManager.resetCopyButton();
                 }
-                #last-password .copied {
-                    background-color: ${theme.copiedColor} !important;
+            });
+
+            DOM.keyInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Delete') {
+                    DOM.keyInput.value = '';
+                    updateHash();
+                    CopyManager.resetCopyButton();
                 }
-            `;
+            });
+
+            DOM.clearPassword.addEventListener('click', function() {
+                DOM.passwordInput.value = '';
+                updateHash();
+            });
+
+            DOM.clearKey.addEventListener('click', function() {
+                DOM.keyInput.value = '';
+                updateHash();
+            });
+
+            DOM.themeToggle.addEventListener('click', function() {
+                state.isPinkTheme = !state.isPinkTheme;
+                ThemeManager.applyTheme(state.isPinkTheme ? CONFIG.themes.pink : CONFIG.themes.blue);
+                ThemeManager.saveTheme(state.isPinkTheme);
+            });
         }
 
-        themeToggle.addEventListener('click', function() {
-            isPinkTheme = !isPinkTheme;
-            applyTheme(isPinkTheme ? pinkTheme : blueTheme);
-            saveTheme(isPinkTheme);
-        });
+        // ==================== 初始化 ====================
+        function init() {
+            ThemeManager.loadSavedTheme();
+            ThemeManager.applyTheme(state.isPinkTheme ? CONFIG.themes.pink : CONFIG.themes.blue);
+            CopyManager.initClipboard();
+            bindEvents();
+        }
 
-        // 页面加载时应用保存的主题
-        loadSavedTheme();
-        applyTheme(isPinkTheme ? pinkTheme : blueTheme);
+        // 启动应用
+        init();
 
     </script>
 
